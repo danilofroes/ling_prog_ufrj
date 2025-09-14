@@ -1,21 +1,17 @@
-class Fibonacci {
-    private:
-        unsigned int resultado;
+#include "fibonacci.h"
 
-        unsigned int computeFibonacci(unsigned int indice) {
-            if (indice == 1)
-                return 0;
+    unsigned int Fibonacci::computeFibonacci(unsigned int indice) {
+        if (indice == 1)
+            return 0;
 
-            else if (indice == 2)
-                return 1;
+        else if (indice == 2)
+            return 1;
 
-            return computeFibonacci(indice - 1) + computeFibonacci(indice - 2);
-        }
+        return computeFibonacci(indice - 1) + computeFibonacci(indice - 2);
+    }
 
-    public:
-        void setFibonacci(unsigned int indice) {
-            resultado = computeFibonacci(indice);
-        }
+    void Fibonacci::setFibonacci(unsigned int indice) {
+        resultado = computeFibonacci(indice);
+    }
 
-        unsigned int getFibonacci() { return resultado; }
-};
+    unsigned int Fibonacci::getFibonacci() { return resultado; }
