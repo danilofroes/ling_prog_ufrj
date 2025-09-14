@@ -11,10 +11,10 @@ using namespace std;
 int main() {
     int numero;
 
-    cout << "Insira um número inteiro positivo para exibir seu n-ésimo número na sequência de Fibonacci:";
+    cout << "\nInsira um numero inteiro positivo para exibir seu n-esimo numero na sequencia de Fibonacci: ";
     cin >> numero;
 
-    cout << "Resultado:" << calcularFibonacci(numero) << endl;
+    cout << "\n\nResultado: " << calcularFibonacci(numero) << endl;
 
     return 0;
 }
