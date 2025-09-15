@@ -1,0 +1,16 @@
+(*  
+    Declaração de um inteiro em C++
+    -> O <indentificador> será um termo léxico já processado antes da análise sintática da GLC 
+*)
+<declaracao_int> ::= "int" <identificador> <atribuicao_opcional> ";"
+<atribuicao_opcional> ::= "=" <numero> | ""
+
+<digito> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<numero> ::= <digito> | <digito> <numero>
+
+(*  
+    Declaração do laço de repetição while em C++
+    -> Condição e comandos foram abstraídos aqui 
+*)
+<declaracao_while> ::= "while" "(" <condicao> ")" <bloco>
+<bloco> ::= "{" <comandos> "}"
