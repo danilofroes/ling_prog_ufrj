@@ -1,0 +1,29 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. RELATORIO_FUNCIONARIO
+AUTHOR. Danilo Froes
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+
+01 WS-FUNCIONARIO.
+      02 FUNC-ID      PIC 9(4)    VALUE 1812.
+      02 FUNC-NOME    PIC X(40)   VALUE "Danilo Froes".
+      02 FUNC-CARGO   PIC X(40)   VALUE "Eng. de Eletronica e Computacao".
+      02 FUNC-SALARIO PIC 9(5)V99 VALUE 12903.00.
+
+01 WS-SALARIO-FORMATADO PIC R$ ZZZ.ZZ9,99.
+
+PROCEDURE DIVISION.
+PROGRAMA-PRINCIPAL.
+      PERFORM EXIBE-RELATORIO.
+      
+      STOP RUN.
+
+EXIBE-RELATORIO.
+      DISPLAY "--------- RELATORIO DE DADOS DO FUNCIONARIO ---------".
+      DISPLAY "ID do Funcionario..: " FUNC-ID.
+      DISPLAY "Nome...............: " FUNC-NOME.
+      DISPLAY "Cargo..............: " FUNC-CARGO.
+      MOVE FUNC-SALARIO TO WS-SALARIO-FORMATADO.
+      DISPLAY "Salario............: " WS-SALARIO-FORMATADO.
+      DISPLAY "-----------------------------------------------------".
