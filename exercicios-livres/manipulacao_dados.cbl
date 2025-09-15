@@ -6,10 +6,10 @@ DATA DIVISION.
 WORKING-STORAGE SECTION.
 
 01 WS-FUNCIONARIO.
-      02 FUNC-ID      PIC 9(4)    VALUE 1812.
-      02 FUNC-NOME    PIC X(40)   VALUE "Danilo Froes".
-      02 FUNC-CARGO   PIC X(40)   VALUE "Eng. de Eletronica e Computacao".
-      02 FUNC-SALARIO PIC 9(5)V99 VALUE 12903.00.
+      05 FUNC-ID      PIC 9(4)    VALUE 1812.
+      05 FUNC-NOME    PIC X(40)   VALUE "Danilo Froes".
+      05 FUNC-CARGO   PIC X(40)   VALUE "Eng. de Eletronica e Computacao".
+      05 FUNC-SALARIO PIC 9(5)V99 VALUE 12903.00.
 
 01 WS-SALARIO-FORMATADO PIC R$ ZZZ.ZZ9,99.
 
