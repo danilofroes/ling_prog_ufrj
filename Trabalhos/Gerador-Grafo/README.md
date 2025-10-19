@@ -65,8 +65,8 @@ Danilo Clara 1.2
 
 ## Autoria
 
-**Autor:** Danilo Davi Gomes Fróes
-**DRE:** 124026825
-**Curso:** Engenharia Eletrônica e de Computação
-**Matéria:** [EEL670] - Linguagens de Programação
-**Professor:** Miguel Elias Mitre Campista
+- **Autor:** Danilo Davi Gomes Fróes
+- **DRE:** 124026825
+- **Curso:** Engenharia Eletrônica e de Computação
+- **Matéria:** [EEL670] - Linguagens de Programação
+- **Professor:** Miguel Elias Mitre Campista
