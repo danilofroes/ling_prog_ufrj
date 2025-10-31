@@ -1,7 +1,8 @@
 import pandas as pd
 from pandas.api.types import is_numeric_dtype, is_object_dtype
+from sklearn.model_selection import train_test_split, KFold, StratifiedKFold
 
-class TratamentoDeDados:
+class TratamentoDados:
     def __init__(self, path_dataset: str, coluna_target:str):
         self.path_dataset = path_dataset
 
@@ -51,3 +52,28 @@ class TratamentoDeDados:
         }
 
         return dict_retorno
+    
+    def divisao_holdout(self, tamanho_teste: float = 0.3, divisao_estratificada: bool = False, random_state: int = 42):
+        X_treino, X_teste, y_treino, y_teste =  train_test_split(self.X,
+                                                                 self.y,
+                                                                 test_size=tamanho_teste,
+                                                                 stratify=divisao_estratificada,
+                                                                 random_state=random_state)
+        
+        X_treino = X_treino.reset_index(drop=True)
+        X_teste = X_teste.reset_index(drop = True)
+        y_treino = y_treino.reset_index(drop = True)
+        y_teste = y_teste.reset_index(drop = True)
+
+        dict_retorno = {
+            "X_treino" : X_treino,
+            "X_teste" : X_teste,
+            "y_treino" : y_treino,
+            "y_teste" : y_teste
+        }
+
+        return dict_retorno
+    
+class PreProcessamentoDados:
+    
+
