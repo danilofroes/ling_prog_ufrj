@@ -69,34 +69,26 @@ void Menu::inserirLivro() {
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    if (biblioteca.getAcervo().empty()) {
-        cout << "\nAdicione um livro ao acervo.\n" << endl;
-        cout << "Titulo: ";
-        getline(cin, titulo);
+    cout << "\nAdicione um livro ao acervo.\n" << endl;
+    cout << "Titulo: ";
+    getline(cin, novoLivro.titulo);
 
-        if 
+    cout << "Autor: ";
+    getline(cin, novoLivro.autor);
+    
 
-        cout << "Autor: ";
-        getline(cin, autor);
-        
+    cout << "Ano de publicacao: ";
+    cin >> novoLivro.ano;
+    cin.ignore();
 
-        cout << "Ano de publicacao: ";
-        cin >> ano;
-        cin.ignore();
-
-        cout << "Avaliacao (0.0 a 10.0): ";
-        cin >> avaliacao;
-        cin.ignore();
-    }
-
+    cout << "Avaliacao (0.0 a 10.0): ";
+    cin >> novoLivro.avaliacao;
+    cin.ignore();
 
 }
 
 void Menu::removerLivro() {
-    if (biblioteca.getAcervo().empty()) {
-        cout << "\nAcervo vazio. Nao ha livros para remover.\n" << endl;
-        return;
-    }
+    // Implementação futura
 }
 
 void Menu::buscarPorAutor() {
