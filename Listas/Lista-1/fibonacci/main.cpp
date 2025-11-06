@@ -9,7 +9,7 @@ Autor: Danilo Fróes
 using namespace std;
 
 int main() {
-    int numero;
+    unsigned int numero;
 
     cout << "\nInsira um numero inteiro positivo para exibir seu n-esimo numero na sequencia de Fibonacci: ";
     cin >> numero;
