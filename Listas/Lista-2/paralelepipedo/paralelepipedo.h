@@ -1,11 +1,4 @@
 class Paralelepipedo {
-    private:
-        double x;
-		double y;
-		double z;
-
-        double computeVolume();
-
     public:
         Paralelepipedo(double, double, double);
 
@@ -14,4 +7,12 @@ class Paralelepipedo {
         void setZ(double);
 
         double getVolume();
+        
+    private:
+        double x;
+		double y;
+		double z;
+
+        double checarValor(double, const char*);
+        double computeVolume();
 };

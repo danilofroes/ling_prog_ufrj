@@ -9,35 +9,20 @@ Paralelepipedo::Paralelepipedo(double inX, double inY, double inZ) {
     setZ(inZ);
 }
 
-void Paralelepipedo::setX(double inX) {
-    if (inX <= 0) {
-        x = 1;
-        cout << "\nDimensao X eh negativa ou zero, assumindo valor 1 por padrao.";
+double Paralelepipedo::checarValor(double valor, const char* dimensao) {
+    if (valor <= 0) {
+        cout << "\nDimensao " << dimensao << " eh negativa ou zero, assumindo valor 1 por padrao.";
+        return valor = 1;
     }
 
-    else
-        x = inX;
+    return valor;
 }
 
-void Paralelepipedo::setY(double inY) {
-    if (inY <= 0) {
-        y = 1;
-        cout << "\nDimensao Y eh negativa ou zero, assumindo valor 1 por padrao.";
-    }
+void Paralelepipedo::setX(double inX) { x = checarValor(inX, "X"); }
 
-    else
-        y = inY;
-}
+void Paralelepipedo::setY(double inY) { y = checarValor(inY, "Y"); }
 
-void Paralelepipedo::setZ(double inZ) {
-    if (inZ <= 0) {
-        z = 1;
-        cout << "\nDimensao Z eh negativa ou zero, assumindo valor 1 por padrao.";
-    }
-
-    else
-        z = inZ;
-}
+void Paralelepipedo::setZ(double inZ) { z = checarValor(inZ, "Z"); }
 
 double Paralelepipedo::computeVolume() { return x * y * z; }
 
